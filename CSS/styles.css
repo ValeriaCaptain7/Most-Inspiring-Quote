@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #0ff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?cyberpunk,neon,future') no-repeat center center/cover;
+    filter: blur(8px) brightness(0.5);
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Holographic Silhouette */
+.holo-image {
+    width: 150px;
+    height: 300px;
+    background: url('https://source.unsplash.com/300x600/?woman,hologram') no-repeat center center/cover;
+    filter: brightness(1.5) drop-shadow(0 0 10px #0ff);
+    animation: holo-glow 2s infinite alternate;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+@keyframes holo-glow {
+    0% {
+        filter: brightness(1.5) drop-shadow(0 0 10px #0ff);
+    }
+
+    100% {
+        filter: brightness(2) drop-shadow(0 0 20px #0ff);
+    }
+}
+
+/* Responsive Quote Styling */
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.author {
+    font-size: 1.5rem;
+    color: #ff00ff;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.neon-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: #000;
+    background: #0ff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0ff, 0 0 40px #0ff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.neon-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0ff, 0 0 60px #0ff;
+}
+
+/* Lazy Loading Effect */
+.lazy-load {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.lazy-load.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Neon Awakening Effect */
+.neon-word {
+    display: inline-block;
+    opacity: 0;
+    animation: neon-fade-in 0.8s ease-in-out forwards;
+}
+
+@keyframes neon-fade-in {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+}
+
+/* Responsive Design */
+
+/* Tablets (768px and up) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .author {
+        font-size: 1.3rem;
+    }
+
+    .neon-button {
+        padding: 10px 22px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Smartphones (Up to 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    .author {
+        font-size: 1.2rem;
+    }
+
+    .neon-button {
+        padding: 8px 18px;
+        font-size: 1rem;
+    }
+
+    .background {
+        background-position: center;
+        filter: blur(5px) brightness(0.4);
+    }
+
+    .holo-image {
+        width: 100px;
+        height: 200px;
+    }
+}
