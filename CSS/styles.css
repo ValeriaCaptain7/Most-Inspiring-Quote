@@ -4,7 +4,7 @@ body {
     background: linear-gradient(133deg, rgba(247, 204, 243, 1) 0%, rgba(250, 250, 250, 1) 41%, rgba(250, 232, 224, 0.933) 94%);
     font-family: "Open Sans", serif;
     font-weight: 100;
-    margin: 0;
+    margin: 5px;
     padding: 0;
 }
 
@@ -38,16 +38,6 @@ body {
     /* Maintain aspect ratio */
 }
 
-button {
-    background-color: #81d4fa;
-    /* Light pastel blue */
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
 h2,
 h3,
 h5 {
@@ -56,12 +46,19 @@ h5 {
 }
 
 /* Card Styles */
+
+card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .card {
     background-color: #fff3e0;
     /* Light pastel orange */
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(19, 18, 18, 0.1);
     width: calc(30% - 40px);
     /* Adjust for margin */
     margin-bottom: 20px;
@@ -86,6 +83,7 @@ h5 {
     background-color: #d81b60;
     border-color: pink;
     color: whitesmoke;
+    font-weight: 700;
 }
 
 /* Footer Styles */
@@ -102,7 +100,8 @@ a {
 }
 
 a:hover {
-    color: blueviolet;
+    color: fuchsia;
+    font-weight: 500;
     text-decoration: underline;
 }
 
