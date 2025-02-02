@@ -67,20 +67,20 @@ card-group {
 
 @keyframes glow {
     0% {
-        box-shadow: 0 0 10px gold;
+        box-shadow: 0 0 10px peachpuff;
     }
 
     50% {
-        box-shadow: 0 0 20px gold;
+        box-shadow: 0 0 20px rgb(241, 206, 177);
     }
 
     100% {
-        box-shadow: 0 0 10px gold;
+        box-shadow: 0 0 10px rgb(255, 243, 229);
     }
 }
 
 .card {
-    background-color: #fff3e0;
+    background-color: #fffaf1;
     /* Light pastel orange */
     border-radius: 15px;
     padding: 10px;
@@ -99,8 +99,8 @@ card-group {
 .card:hover {
     transform: scale(1.05);
     /* Scale effect on hover */
-    border-color: rgb(245, 205, 119);
-    box-shadow: 0 0 5px gold, 0 0 30px rgba(229, 161, 15, 0.804);
+    border-color: rgb(243, 201, 234);
+    box-shadow: 0 0 5px pink, 0 0 30px rgba(243, 163, 238, 0.804);
     animation: glow 1.5s infinite alternate;
 }
 
